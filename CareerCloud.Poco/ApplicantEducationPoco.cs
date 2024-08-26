@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CareerCloud.Pocos
 {
-    [Table("ApplicantEducations")]
+    [Table("Applicant_Educations")]
     public class ApplicantEducationPoco : IPoco
     {
         [Key]
-        [Column("Id")]
         public Guid Id { get; set; }
 
         [Column("Applicant")]
-        public Guid ApplicantId { get; set; }
+        public Guid Applicant { get; set; }
 
         [Column("Major")]
         public string Major { get; set; }
@@ -34,6 +29,7 @@ namespace CareerCloud.Pocos
         public byte? CompletionPercent { get; set; }
 
         [Column("Time_Stamp")]
-        public byte[] TimeStamp { get;set; }
+        [Timestamp]
+        public byte[] TimeStamp { get; set; }
     }
 }

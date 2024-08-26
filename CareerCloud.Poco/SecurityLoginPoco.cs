@@ -1,15 +1,13 @@
-﻿using CareerCloud.Pocos;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CareerCloud.Pocos
 {
     [Table("Security_Logins")]
-    public class SecurityLoginsPoco : IPoco
+    public class SecurityLoginPoco : IPoco
     {
         [Key]
-        [Column("Id")]
         public Guid Id { get; set; }
 
         [Column("Login")]
@@ -19,13 +17,13 @@ namespace CareerCloud.Pocos
         public string Password { get; set; }
 
         [Column("Created_Date")]
-        public DateTime CreatedDate { get; set; }
+        public DateTime Created { get; set; }
 
         [Column("Password_Update_Date")]
-        public DateTime? PasswordUpdateDate { get; set; }
+        public DateTime? PasswordUpdate { get; set; }
 
         [Column("Agreement_Accepted_Date")]
-        public DateTime? AgreementAcceptedDate { get; set; }
+        public DateTime? AgreementAccepted { get; set; }
 
         [Column("Is_Locked")]
         public bool IsLocked { get; set; }
@@ -46,7 +44,7 @@ namespace CareerCloud.Pocos
         public bool ForceChangePassword { get; set; }
 
         [Column("Prefferred_Language")]
-        public string PreferredLanguage { get; set; }
+        public string PrefferredLanguage { get; set; }
 
         [Column("Time_Stamp")]
         [Timestamp]

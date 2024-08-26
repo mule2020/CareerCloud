@@ -1,15 +1,13 @@
-﻿using CareerCloud.Pocos;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CareerCloud.Pocos
 {
-    [Table("Company_Job_Descriptions")]
-    public class CompanyJobDescriptionsPoco : IPoco
+    [Table("Company_Jobs_Descriptions")]
+    public class CompanyJobDescriptionPoco : IPoco
     {
         [Key]
-        [Column("Id")]
         public Guid Id { get; set; }
 
         [Column("Job")]

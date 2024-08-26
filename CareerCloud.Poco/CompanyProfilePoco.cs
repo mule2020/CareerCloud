@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace CareerCloud.Pocos
 {
     [Table("Company_Profiles")]
-    public class CompanyProfilesPoco : IPoco
+    public class CompanyProfilePoco : IPoco
     {
         [Key]
         [Column("Id")]

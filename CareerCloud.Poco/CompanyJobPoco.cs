@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CareerCloud.Pocos
 {
-    [Table("Company_Descriptions")]
-    public class CompanyDescriptionsPoco : IPoco
+    [Table("Company_Jobs")]
+    public class CompanyJobPoco : IPoco
     {
         [Key]
         [Column("Id")]
@@ -15,14 +15,14 @@ namespace CareerCloud.Pocos
         [Column("Company")]
         public Guid Company { get; set; }
 
-        [Column("LanguageId")]
-        public string LanguageId { get; set; }
+        [Column("Profile_Created")]
+        public DateTime ProfileCreated { get; set; }
 
-        [Column("Company_Name")]
-        public string CompanyName { get; set; }
+        [Column("Is_Inactive")]
+        public bool IsInactive { get; set; }
 
-        [Column("Company_Description")]
-        public string CompanyDescription { get; set; }
+        [Column("Is_Company_Hidden")]
+        public bool IsCompanyHidden { get; set; }
 
         [Column("Time_Stamp")]
         [Timestamp]

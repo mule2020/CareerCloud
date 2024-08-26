@@ -5,8 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace CareerCloud.Pocos
 {
     [Table("System_Language_Codes")]
-    public class SystemLanguageCodesPoco
+    public class SystemLanguageCodePoco: IPoco
     {
+        
+        [Column("id")]
+
+        public Guid Id { get; set; }
+
         [Key]
         [Column("LanguageID")]
         public string LanguageID { get; set; }

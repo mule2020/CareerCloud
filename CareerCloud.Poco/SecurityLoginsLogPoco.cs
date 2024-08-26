@@ -1,5 +1,4 @@
-﻿using CareerCloud.Pocos;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +8,6 @@ namespace CareerCloud.Pocos
     public class SecurityLoginsLogPoco : IPoco
     {
         [Key]
-        [Column("Id")]
         public Guid Id { get; set; }
 
         [Column("Login")]
@@ -22,6 +20,6 @@ namespace CareerCloud.Pocos
         public DateTime LogonDate { get; set; }
 
         [Column("Is_Succesful")]
-        public bool IsSuccessful { get; set; }
+        public bool IsSuccesful { get; set; }
     }
 }

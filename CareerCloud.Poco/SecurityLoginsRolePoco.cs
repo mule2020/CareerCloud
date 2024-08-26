@@ -5,21 +5,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CareerCloud.Pocos
 {
-    [Table("Company_Job_Educations")]
-    public class CompanyJobEducationsPoco : IPoco
+    [Table("Security_Logins_Roles")]
+    public class SecurityLoginsRolePoco : IPoco
     {
         [Key]
         [Column("Id")]
         public Guid Id { get; set; }
 
-        [Column("Job")]
-        public Guid Job { get; set; }
+        [Column("Login")]
+        public Guid Login { get; set; }
 
-        [Column("Major")]
-        public string Major { get; set; }
-
-        [Column("Importance")]
-        public short Importance { get; set; }
+        [Column("Role")]
+        public Guid Role { get; set; }
 
         [Column("Time_Stamp")]
         [Timestamp]

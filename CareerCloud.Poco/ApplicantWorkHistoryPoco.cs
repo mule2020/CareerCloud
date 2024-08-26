@@ -1,5 +1,4 @@
-﻿using CareerCloud.Pocos;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +8,6 @@ namespace CareerCloud.Pocos
     public class ApplicantWorkHistoryPoco : IPoco
     {
         [Key]
-        [Column("Id")]
         public Guid Id { get; set; }
 
         [Column("Applicant")]
@@ -31,13 +29,13 @@ namespace CareerCloud.Pocos
         public string JobDescription { get; set; }
 
         [Column("Start_Month")]
-        public byte StartMonth { get; set; }
+        public short StartMonth { get; set; }
 
         [Column("Start_Year")]
         public int StartYear { get; set; }
 
         [Column("End_Month")]
-        public byte EndMonth { get; set; }
+        public short EndMonth { get; set; }
 
         [Column("End_Year")]
         public int EndYear { get; set; }
