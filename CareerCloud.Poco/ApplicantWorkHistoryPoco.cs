@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CareerCloud.Pocos
 {
@@ -43,5 +47,8 @@ namespace CareerCloud.Pocos
         [Column("Time_Stamp")]
         [Timestamp]
         public byte[] TimeStamp { get; set; }
+
+        public virtual ApplicantProfilePoco ApplicantProfile { get; set; }
+        public virtual SystemCountryCodePoco SystemCountryCode { get; set; }
     }
 }

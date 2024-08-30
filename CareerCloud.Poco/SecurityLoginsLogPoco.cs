@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CareerCloud.Pocos
 {
@@ -21,5 +25,8 @@ namespace CareerCloud.Pocos
 
         [Column("Is_Succesful")]
         public bool IsSuccesful { get; set; }
+
+        public virtual SecurityLoginPoco SecurityLogin { get; set; }
+
     }
 }
